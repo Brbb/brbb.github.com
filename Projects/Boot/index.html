@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="../../Libs/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="container hero-unit">
+
+      <h1>Bootstrap: first time!</h1>
+      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+      
+    </div>
+    
+    <div class="container">
+
+      <h3>This is a mixed example</h3>
+      <p>Used to test skills with easy layout.</p>
+      	<div class="container-fluid">
+		      <div class="row-fluid">
+			      	<div class="span3 sidebar-nav">
+				      	<ul class="nav nav-tabs nav-stacked">
+				      	<li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+				      	<li><a href="#"><i class="icon-user"></i> User <span id="not-num" class="badge badge-important">0</span></a></li>
+				      	<li><a href="#" id="share"><i class="icon-share"></i> Share</a></li>
+				      	</ul>
+	      			</div>
+				    <div class="span8 well">
+				    Test with <a href="#" rel="tooltip" data-placement="top" data-original-title="hover tooltip">hover</a> tooltip.
+				    </div>
+			</div>
+		</div>
+      
+    </div>
+    
+    <!-- Alert vari -->
+    
+    <div id="incoming" class="alert alert-success" style="display:none">
+	    <button type="button" class="close" data-dismiss="alert">×</button>
+  		<strong>Hey!</strong> There's a new incoming message in your inbox.
+  	</div>
+  	
+	<div class="modal fade" id="modal_msg">
+	  <div class="modal-header">
+	    <a class="close" data-dismiss="modal">&times;</a>
+	    <h3>Incoming</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>Here your messages</p>
+	  </div>
+	  <div class="modal-footer">
+	    <a href="#" class="btn" data-dismiss="modal" id="btn_cls">Close</a>
+	  </div>
+	</div>
+    
+    
+    
+    <!-- Script (bottom) -->
+    <script src="../../Libs/jQuery/jquery_1.8.2.js"></script>
+    <script src="../../Libs/bootstrap/js/bootstrap.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+	    $("[rel=tooltip]").tooltip();
+	    CheckNotNum();
+    }
+    );
+    
+    $("#share").click(function()
+	{
+	    	$('#incoming').show('slow');
+	    	var notification_number = parseInt($('#not-num').text());
+	    	$('#not-num').html(notification_number+1);
+	    	CheckNotNum();
+	});
+	
+	$("#not-num").click(function()
+	{
+		$("#modal_msg").modal('show');
+	});
+	
+	$("#btn_cls").click(MarkAsRead());
+	
+	function CheckNotNum()
+	{
+		var notification_number = parseInt($('#not-num').text());
+		if(notification_number == 0)
+		{
+			$('#not-num').removeClass('badge-important');
+		}
+		else
+		{
+			$('#not-num').addClass('badge-important');
+		}
+	}
+	
+	function MarkAsRead()
+	{
+		var notification_number = parseInt($('#not-num').text());
+		if(notification_number > 0)
+		{
+			$('#not-num').html(notification_number-1);
+		}
+	}
+    
+    </script>
+  </body>
+</html>
+
+
