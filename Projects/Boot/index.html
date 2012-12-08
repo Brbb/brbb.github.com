@@ -4,6 +4,8 @@
     <title>Bootstrap 101 Template</title>
     <!-- Bootstrap -->
     <link href="../../Libs/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    
     <style>
       body {
       margin: 0;
@@ -17,16 +19,51 @@
 	      padding-top: 10%;
       }
       
+      .quote
+      {
+	      font-family: 'Great Vibes';
+	      font-size: 24px;      }
+      
+      .hero-unit
+      {
+	      background-color: rgba(204,204,204,0.43)
+      }
                   
     </style>
   </head>
   <body>
-		<div class="container" id="quoteblock">
+		<div class="container quote" id="quoteblock">
 			<blockquote class="pull-right">
-				<p>La natura e' piena d'infinite ragioni, che non furon mai in isperienzia.</p>
+				<p class="lead">La natura e' piena d'infinite ragioni, che non furon mai in isperienzia.</p>
 				<small><cite title="Source Title">Leonardo Da Vinci</cite></small>
 				</blockquote>
     	</div>
+    	
+    	<div id="mainPage" class="carousel slide">
+				  <!-- Carousel items -->
+				  <div class="carousel-inner">
+				    
+				    <div class="active item">
+				    	<div class="hero-unit container quote" id="start-block">
+				    		<h1>Gaia technology design</h1>
+				    		<br/>
+				    		<p>Inspired by Nature, moved by feelings.</p>
+				    	</div>
+				    </div>
+				    <div class="item">
+				    	<div class="hero-unit container quote">
+				    		<h1>Arduino design</h1>
+				    		<br/>
+				    		<p>Low costs, high results.</p>
+				    	</div>
+				    </div>
+				    				    
+				  </div>
+				  <!-- Carousel nav -->
+				  <a class="carousel-control left" href="#mainPage" data-slide="prev">&lsaquo;</a>
+				  <a class="carousel-control right" href="#mainPage" data-slide="next">&rsaquo;</a>
+			</div>
+
     	
   </body>
      <!-- Script (bottom) -->
@@ -37,6 +74,7 @@
     $(document).ready(function()
     {
     	$("#quoteblock").hide().fadeIn(2000);
+    	$("#mainPage").hide().fadeIn(5000);
     }
     );
     
