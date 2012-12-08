@@ -5,6 +5,7 @@
     <!-- Bootstrap -->
     <link href="../../Libs/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     
     <style>
       body {
@@ -22,14 +23,32 @@
       .quote
       {
 	      font-family: 'Great Vibes';
-	      font-size: 24px;      }
+	      font-size: 24px;
+	  }
+	  .non-quote
+      {
+	      font-family: 'Poiret One',cursive;
+	      font-size: 18px;
+	      font-weight: 100;
+	  }
       
       .hero-unit
       {
 	      background-color: rgba(204,204,204,0.43)
       }
+      
+      .well
+      {
+	      background-color: rgba(200,220,203,0.0)      }
                   
     </style>
+    <div class="pull-right">
+					    			<img class="contacts" id="tweet" src="../Images/twitter-icon.png"  width="32" height="32" />
+					    			<img class="contacts" id="linkedin" src="../Images/linkedin-icon.png" width="32" height="32" />
+					    			<img class="contacts" id="rss" src="../Images/rss-feed-icon.png" width="32" height="32" />
+					    			<img class="contacts" id="pinterest" src="../Images/pinterest-icon.png" width="32" height="32" />	
+    </div>
+    
   </head>
   <body>
 		<div class="container quote" id="quoteblock">
@@ -43,26 +62,60 @@
 				  <!-- Carousel items -->
 				  <div class="carousel-inner">
 				    
-				    <div class="active item">
-				    	<div class="hero-unit container quote" id="start-block">
-				    		<h1>Gaia technology design</h1>
-				    		<br/>
-				    		<p>Inspired by Nature, moved by feelings.</p>
+				  	  <div class="active item">
+				    		<div class="hero-unit container quote" id="start-block">
+					    		<div class="row-fluid">
+					    			<div class="span6">
+					    				<h1>Gaia domotica design</h1>
+					    				<br/>
+					    				<p>Inspired by Nature, moved by feelings.</p>
+					    			</div>
+					    			<div class="span4 pull-right">
+										  <address class="non-quote">
+										  <strong>Administration Panels.</strong><br/>
+										  Manage your home with Arduino<br/>and the Gaia framework.<br/>
+										</address>
+										 
+									</div>
+								</div>
+				    		</div>
+				  	  </div>
+				    <div class="item">
+				    	<div class="hero-unit container quote">
+				    		<div class="row-fluid">
+					    			<div class="span6">
+					    				<h1>Arduino board design</h1>
+					    				<br/>
+					    				<p>Simple electronics, great results.</p>
+					    			</div>
+					    			<div class="span2 pull-right">
+										      <img src="http://arduino.cc/en/pub/skins/arduinoWide_SSO/img/logo.png"  alt="">
+									</div>
+								</div>
+
 				    	</div>
 				    </div>
 				    <div class="item">
 				    	<div class="hero-unit container quote">
-				    		<h1>Arduino design</h1>
-				    		<br/>
-				    		<p>Low costs, high results.</p>
+				    		<div class="row-fluid">
+					    			<div class="span6">
+					    				<h1>Data Visualization</h1>
+					    				<br/>
+					    				<p>One "eye-shot", many informations.</p>
+					    			</div>
+					    			<div class="span4 pull-right">
+										      <img src="../Images/3d-bar-graph-icon.png" width="120" height="120" />
+									</div>
+								</div>
+
 				    	</div>
 				    </div>
 				    				    
-				  </div>
+			  </div>
 				  <!-- Carousel nav -->
-				  <a class="carousel-control left" href="#mainPage" data-slide="prev">&lsaquo;</a>
-				  <a class="carousel-control right" href="#mainPage" data-slide="next">&rsaquo;</a>
-			</div>
+		<a class="carousel-control left" href="#mainPage" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control right" href="#mainPage" data-slide="next">&rsaquo;</a>
+		</div>
 
     	
   </body>
@@ -73,8 +126,10 @@
     <script type="text/javascript">
     $(document).ready(function()
     {
-    	$("#quoteblock").hide().fadeIn(2000);
+    	$("#quoteblock").hide().fadeIn(1200);
     	$("#mainPage").hide().fadeIn(5000);
+    	
+    	$(".contacts").hide().fadeIn(7000);
     }
     );
     
