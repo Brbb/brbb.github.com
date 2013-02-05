@@ -94,7 +94,7 @@
     		
 		function getConfig()
 		{
-			$.getJSON("http://192.168.0.7/api/1326224522a88c47b864811252b4573/lights/3",
+			$.getJSON("http://<address>/api/<key>/lights/3",
 			function(data)
 			{
 				console.log(data);
@@ -131,7 +131,7 @@
 		function SetOnOff(onOff)
 		{
 			$.ajax({
-				url: 'http://192.168.0.7/api/1326224522a88c47b864811252b4573/lights/3/state',
+				url: 'http://<address>/api/<key>/lights/3/state',
 				type: 'PUT',
 				success: function(response) {},
 				data:'{"bri": 80, "on": '+onOff+'}'	
@@ -141,7 +141,7 @@
 		
 		$('#onOff').click(function()
 		{
-			$.getJSON("http://192.168.0.7/api/1326224522a88c47b864811252b4573/lights/3",
+			$.getJSON("http://<address>/api/<key>/lights/3",
 			function(data)
 			{
 				$.each(data, function(key, val) 
