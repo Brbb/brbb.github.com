@@ -1,0 +1,64 @@
+     /* This makes absolutely positioned elements like p, h1,
+     and some bootstrap elements placed properly. */
+     #absolute-wrapper p, #absolute-wrapper h1, #absolute-wrapper h2, #absolute-wrapper h3, #absolute-wrapper h4, #absolute-wrapper h5, #absolute-wrapper h6 {
+       margin-top: 0 !important;
+     }
+     .control-label.control-label-1 {
+       font-weight: 200;
+       font-size: 25px;
+       width: 389px;
+       height: 20px;
+       position: absolute;
+       top: 196px;
+       left: 86px;
+     }
+     .navbar .navbar-inner .nav li a.a-1 {
+       color: #333333;
+     }
+     .row-fluid .span9 .btn-toolbar .btn-group .btn.btn-1 {
+       background: #e6e6e6;
+       -moz-box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.14902), 0px 1px 2px 0px rgba(0, 0, 0, 0.0470588);
+       -webkit-box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.14902), 0px 1px 2px 0px rgba(0, 0, 0, 0.0470588);
+       -o-box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.14902), 0px 1px 2px 0px rgba(0, 0, 0, 0.0470588);
+       box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.14902), 0px 1px 2px 0px rgba(0, 0, 0, 0.0470588);
+     }
+     #absolute-wrapper {
+       position: relative;
+       width: 980px;
+       /* centers the document */
+       margin: 0 auto;
+       /* hack to stick to top of page */
+       height: 1px;
+     }
+     .navbar {
+       height: 42px;
+     }
+     .navbar .navbar-inner {
+       height: 42px;
+     }
+     .row-fluid {
+       width: 821px;
+       height: 85px;
+       position: absolute;
+       top: 250px;
+       left: 87px;
+     }
+     .row-fluid .span3 {
+       padding: 15px 0px 0px 0px;
+     }
+     .row-fluid .span3 .control-label {
+       font-weight: 300;
+       font-size: 18px;
+     }
+     .dom-body-text {
+       width: 196px;
+       height: 46px;
+       position: absolute;
+       top: 298px;
+       left: 84px;
+     }
+     .dom-body-text p {
+       font-weight: 200;
+       font-size: 12px;
+       color: #919191;
+     }
