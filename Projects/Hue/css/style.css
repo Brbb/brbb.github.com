@@ -70,3 +70,11 @@
 	  top: 302px;
 	  left: 384px;
 	}
+	
+	.chart-container-class {
+  width: 600px;
+  height: 450px;
+  position: absolute;
+  top: 350px;
+  left: 90px;
+}
