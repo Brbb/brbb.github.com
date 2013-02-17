@@ -160,7 +160,7 @@
     		
 		function getConfig(bulb_num)
 		{
-			$.getJSON("http://192.168.0.7/api/1326224522a88c47b864811252b4573/lights/"+bulb_num,
+			$.getJSON("http://<your_hub_address>/api/<your_bulb_key>/lights/"+bulb_num,
 			function(data)
 			{
 				console.log(data);
@@ -191,7 +191,7 @@
 		{
 			var bulb = getCurrentBulb();
 			$.ajax({
-				url: 'http://192.168.0.7/api/1326224522a88c47b864811252b4573/lights/'+bulb+'/state',
+				url: 'http://<your_hub_address>/api/<your_bulb_key>/lights/'+bulb+'/state',
 				type: 'PUT',
 				success: getConfig(),
 				data:'{"bri": 80, "on": '+onOff+'}'	
@@ -215,7 +215,7 @@
 		$('#onOff').click(function()
 		{
 			var bulb = getCurrentBulb();
-			$.getJSON("http://192.168.0.7/api/1326224522a88c47b864811252b4573/lights/"+bulb,
+			$.getJSON("http://<your_hub_address>/api/<your_bulb_key>/lights/"+bulb,
 			function(data)
 			{
 				$.each(data, function(key, val) 
